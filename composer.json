@@ -18,7 +18,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "elasticsearch/elasticsearch": "dev-php8 as v5.5.1",
+    "elasticsearch/elasticsearch": "5.x-dev as v5.5.1",
     "ongr/elasticsearch-dsl": "5.*",
     "illuminate/container": "5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|^6.0|^7.0|^8.0",
     "illuminate/contracts": "5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|^6.0|^7.0|^8.0",
@@ -35,7 +35,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/Watercycle/elasticsearch-php"
+      "url": "https://github.com/packbackbooks/elasticsearch-php"
     }
   ],
   "autoload": {
