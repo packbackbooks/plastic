@@ -40,8 +40,11 @@ class Install extends Command
     {
         $this->repository->setSource($this->option('database'));
 
-        $this->repository->createRepository();
-
-        $this->info('Mapping table created successfully');
+        if (!$this->repository->exists()) {
+            $this->repository->createRepository();
+            $this->info('Mapping table created successfully');
+        } else {
+            $this->warn('Mapping table already exists.');
+        }
     }
 }

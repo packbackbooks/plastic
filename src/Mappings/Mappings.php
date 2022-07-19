@@ -150,11 +150,11 @@ class Mappings
     }
 
     /**
-     * Check it the repository table exits.
+     * Check it the repository table exists.
      *
      * @return mixed
      */
-    public function exits()
+    public function exists()
     {
         return $this->schema()->hasTable($this->table);
     }
