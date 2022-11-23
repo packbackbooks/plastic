@@ -55,12 +55,10 @@ class PlasticServiceProvider extends ServiceProvider
      */
     protected function registerManager()
     {
-        $this->app->singleton('plastic', function ($app) {
-            return new PlasticManager($app);
-        });
+        $this->app->singleton(PlasticManager::class);
 
         $this->app->singleton('plastic.connection', function ($app) {
-            return Plastic::connection();
+            return $app['plastic']->connection();
         });
     }
 
