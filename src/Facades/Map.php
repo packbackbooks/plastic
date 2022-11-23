@@ -13,6 +13,6 @@ class Map extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return Plastic::getConnection()->getMapBuilder();
+        return Plastic::connection()->getMapBuilder();
     }
 }
