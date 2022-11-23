@@ -5,6 +5,7 @@ namespace Sleimanx2\Plastic;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 use Sleimanx2\Plastic\Facades\Plastic;
+use Sleimanx2\Plastic\DSL\SearchBuilder;
 
 /**
  * @codeCoverageIgnore
@@ -59,7 +60,7 @@ class PlasticServiceProvider extends ServiceProvider
         });
 
         $this->app->singleton('plastic.connection', function ($app) {
-            return $app['plastic']->connection();
+            return Plastic::connection();
         });
     }
 
