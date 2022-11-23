@@ -3,6 +3,7 @@
 namespace Sleimanx2\Plastic\Facades;
 
 use Illuminate\Support\Facades\Facade;
+use Sleimanx2\Plastic\DSL\SearchBuilder;
 
 class Plastic extends Facade
 {
@@ -13,6 +14,6 @@ class Plastic extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return static::$app['plastic'];
+        return SearchBuilder::class;
     }
 }
