@@ -3,6 +3,7 @@
 namespace Sleimanx2\Plastic\Facades;
 
 use Illuminate\Support\Facades\Facade;
+use Sleimanx2\Plastic\Map\Builder;
 
 class Map extends Facade
 {
@@ -13,6 +14,6 @@ class Map extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return Plastic::connection()->getMapBuilder();
+        return Builder::class;
     }
 }
