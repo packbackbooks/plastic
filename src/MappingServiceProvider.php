@@ -4,6 +4,8 @@ namespace Sleimanx2\Plastic;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
+use Sleimanx2\Plastic\Facades\Plastic;
+use Sleimanx2\Plastic\Connection;
 use Sleimanx2\Plastic\Console\Mapping\Install;
 use Sleimanx2\Plastic\Console\Mapping\Make;
 use Sleimanx2\Plastic\Console\Mapping\ReRun;
@@ -59,6 +61,9 @@ class MappingServiceProvider extends ServiceProvider
      */
     protected function registerCreator()
     {
+        $this->app->singleton(Connection::class, function() {
+            return Plastic::connection();
+        });
         $this->app->singleton('mapping.creator', function ($app) {
             return new Creator($app['files']);
         });
