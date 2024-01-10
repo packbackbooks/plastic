@@ -37,6 +37,10 @@
       "type": "vcs",
       "url": "https://github.com/packbackbooks/elasticsearch-php"
     }
+    {
+      "type": "vcs",
+      "url": "https://github.com/packbackbooks/elasticsearch-dsl"
+    }
   ],
   "autoload": {
     "psr-4": {
