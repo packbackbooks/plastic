@@ -19,7 +19,7 @@
   "require": {
     "php": ">=7.0",
     "packbackbooks/elasticsearch5": "dev-5.x-tech-2221",
-    "ongr/elasticsearch-dsl": "dev-5.x-tech-2221 as 5.*",
+    "ongr/elasticsearch-dsl": "dev-5.x-tech-2221 as 5.5.1",
     "illuminate/container": ">=5.2",
     "illuminate/contracts": ">=5.2",
     "illuminate/console": ">=5.2",
@@ -34,8 +34,16 @@
   },
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/packbackbooks/elasticsearch-php"
+        "type": "package",
+        "package": {
+            "name": "packbackbooks/elasticsearch5",
+            "version": "dev-5.x-tech-2221",
+            "source": {
+                "url": "https://github.com/packbackbooks/elasticsearch-php",
+                "type": "git",
+                "reference": "origin/5.x-tech-2221"
+            }
+        }
     },
     {
         "type": "vcs",
