@@ -2,8 +2,8 @@
 
 namespace Sleimanx2\Plastic\DSL;
 
-use ONGR\ElasticsearchDSL\Search as Query;
-use ONGR\ElasticsearchDSL\Suggest\Suggest;
+use Packback\ElasticsearchDSL\Search as Query;
+use Packback\ElasticsearchDSL\Suggest\Suggest;
 use Sleimanx2\Plastic\Connection;
 
 class SuggestionBuilder

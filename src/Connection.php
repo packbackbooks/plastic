@@ -2,9 +2,9 @@
 
 namespace Sleimanx2\Plastic;
 
-use Elasticsearch\Client;
-use Elasticsearch\ClientBuilder;
-use ONGR\ElasticsearchDSL\Search as DSLQuery;
+use Elasticsearch5\Client;
+use Elasticsearch5\ClientBuilder;
+use Packback\ElasticsearchDSL\Search as DSLQuery;
 use Sleimanx2\Plastic\DSL\SearchBuilder;
 use Sleimanx2\Plastic\DSL\SuggestionBuilder;
 use Sleimanx2\Plastic\Map\Builder as MapBuilder;

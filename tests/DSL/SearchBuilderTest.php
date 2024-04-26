@@ -474,7 +474,7 @@ class SearchBuilderTest extends PHPUnit_Framework_TestCase
         $builder->functions(function (SearchBuilder $builder) {
             $builder->matchAll();
         }, function ($builder) {
-            $builder->weight(3, new \ONGR\ElasticsearchDSL\Query\TermLevel\TermQuery('name', 'abc'));
+            $builder->weight(3, new \Packback\ElasticsearchDSL\Query\TermLevel\TermQuery('name', 'abc'));
         });
 
         $this->assertEquals([
@@ -495,7 +495,7 @@ class SearchBuilderTest extends PHPUnit_Framework_TestCase
         $builder->functions(function (SearchBuilder $builder) {
             $builder->matchAll();
         }, function ($builder) {
-            $builder->random(3, new \ONGR\ElasticsearchDSL\Query\TermLevel\TermQuery('name', 'abc'));
+            $builder->random(3, new \Packback\ElasticsearchDSL\Query\TermLevel\TermQuery('name', 'abc'));
         });
 
         $this->assertEquals([
@@ -657,7 +657,7 @@ class SearchBuilderTest extends PHPUnit_Framework_TestCase
     private function getBuilder()
     {
         $connection = Mockery::mock('Sleimanx2\Plastic\Connection');
-        $query = new \ONGR\ElasticsearchDSL\Search();
+        $query = new \Packback\ElasticsearchDSL\Search();
 
         return Mockery::mock('Sleimanx2\Plastic\DSL\SearchBuilder', [$connection, $query])->makePartial();
     }

@@ -41,7 +41,7 @@ class PlasticConnectionTest extends \PHPUnit_Framework_TestCase
     {
         $connection = $this->getConnectionMock();
 
-        $this->assertInstanceOf(ONGR\ElasticsearchDSL\Search::class, $connection->getDSLQuery());
+        $this->assertInstanceOf(Packback\ElasticsearchDSL\Search::class, $connection->getDSLQuery());
     }
 
     /**

@@ -2,7 +2,7 @@
 
 namespace Sleimanx2\Plastic\Console\Index;
 
-use Elasticsearch\Client;
+use Elasticsearch5\Client;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Sleimanx2\Plastic\Facades\Plastic;

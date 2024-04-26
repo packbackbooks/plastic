@@ -2,7 +2,7 @@
 
 namespace Sleimanx2\Plastic\DSL;
 
-use ONGR\ElasticsearchDSL\Query\Compound\FunctionScoreQuery;
+use Packback\ElasticsearchDSL\Query\Compound\FunctionScoreQuery;
 
 /**
  * Class FunctionScoreBuilder.
