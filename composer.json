@@ -18,8 +18,8 @@
   ],
   "require": {
     "php": ">=7.0",
-    "elasticsearch/elasticsearch": "5.x-dev as v5.5.1",
-    "ongr/elasticsearch-dsl": "5.*",
+    "packbackbooks/elasticsearch": "dev-5.x-tech-2221 as v5.5.1",
+    "ongr/elasticsearch-dsl": "dev-5.x-tech-2221 as 5.*",
     "illuminate/container": ">=5.2",
     "illuminate/contracts": ">=5.2",
     "illuminate/console": ">=5.2",
