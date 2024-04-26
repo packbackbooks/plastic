@@ -18,7 +18,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "packbackbooks/elasticsearch": "dev-5.x-tech-2221 as v5.5.1",
+    "packbackbooks/elasticsearch5": "dev-5.x-tech-2221 as v5.5.1",
     "ongr/elasticsearch-dsl": "dev-5.x-tech-2221 as 5.*",
     "illuminate/container": ">=5.2",
     "illuminate/contracts": ">=5.2",
