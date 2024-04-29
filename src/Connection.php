@@ -4,7 +4,6 @@ namespace Sleimanx2\Plastic;
 
 use Elasticsearch5\Client;
 use Elasticsearch5\ClientBuilder;
-use GuzzleHttp\Client as GuzzleClient;
 use Packback\ElasticsearchDSL\Search as DSLQuery;
 use Sleimanx2\Plastic\DSL\SearchBuilder;
 use Sleimanx2\Plastic\DSL\SuggestionBuilder;
