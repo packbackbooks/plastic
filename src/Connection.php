@@ -248,7 +248,6 @@ class Connection
     private function buildClient(array $config)
     {
         $client = ClientBuilder::create()
-            ->setHandler(app(GuzzleClient::class))
             ->setHosts($config['hosts']);
 
         if (isset($config['retries'])) {
