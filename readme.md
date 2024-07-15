@@ -47,11 +47,11 @@ This will create a config file at `config/plastic.php` and a mapping directory a
 To get started, enable searching capabilities in your model by adding the `Sleimanx2\Plastic\Searchable` trait:
 
 ```php
-use Sleimanx2\Plastic\Searchable;
+use Sleimanx2\Plastic\PlasticSearchable;
 
 class Book extends Model
 {
-    use Searchable;
+    use PlasticSearchable;
 }
 ```
 

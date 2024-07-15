@@ -11,7 +11,7 @@ use Sleimanx2\Plastic\Persistence\EloquentPersistence;
  * @method static \Sleimanx2\Plastic\DSL\SearchBuilder search()
  * @method static \Sleimanx2\Plastic\DSL\SuggestionBuilder suggest()
  */
-trait Searchable
+trait PlasticSearchable
 {
     /**
      * Is indexed in elastic search.
@@ -44,7 +44,7 @@ trait Searchable
     /**
      * Searchable boot model.
      */
-    public static function bootSearchable()
+    public static function bootPlasticSearchable()
     {
         static::saved(function ($model) {
             if ($model->shouldSyncDocument()) {

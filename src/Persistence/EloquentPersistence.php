@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 use Sleimanx2\Plastic\Connection;
 use Sleimanx2\Plastic\Exception\InvalidArgumentException;
 use Sleimanx2\Plastic\Exception\MissingArgumentException;
-use Sleimanx2\Plastic\Searchable;
+use Sleimanx2\Plastic\PlasticSearchable;
 
 class EloquentPersistence
 {
@@ -55,7 +55,7 @@ class EloquentPersistence
         // Check if the model is searchable before setting the query builder model
         $traits = class_uses_recursive(get_class($model));
 
-        if (!isset($traits[Searchable::class])) {
+        if (!isset($traits[PlasticSearchable::class])) {
             throw new InvalidArgumentException(get_class($model).' does not use the searchable trait');
         }
 

@@ -35,7 +35,7 @@ use Sleimanx2\Plastic\Fillers\EloquentFiller;
 use Sleimanx2\Plastic\Fillers\FillerInterface;
 use Sleimanx2\Plastic\PlasticPaginator;
 use Sleimanx2\Plastic\PlasticResult;
-use Sleimanx2\Plastic\Searchable;
+use Sleimanx2\Plastic\PlasticSearchable;
 
 class SearchBuilder
 {
@@ -133,18 +133,18 @@ class SearchBuilder
     /**
      * Set the eloquent model to use when querying elastic search.
      *
-     * @param Model|Searchable $model
-     *
-     * @throws InvalidArgumentException
+     * @param Model|PlasticSearchable $model
      *
      * @return $this
+     *@throws InvalidArgumentException
+     *
      */
     public function model(Model $model)
     {
         // Check if the model is searchable before setting the query builder model
         $traits = class_uses_recursive(get_class($model));
 
-        if (!isset($traits[Searchable::class])) {
+        if (!isset($traits[PlasticSearchable::class])) {
             throw new InvalidArgumentException(get_class($model).' does not use the searchable trait');
         }
 

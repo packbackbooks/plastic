@@ -46,7 +46,7 @@ class MappingWithoutModel extends \Sleimanx2\Plastic\Mappings\Mapping
 
 class SearchableModel extends \Illuminate\Database\Eloquent\Model
 {
-    use \Sleimanx2\Plastic\Searchable;
+    use \Sleimanx2\Plastic\PlasticSearchable;
 }
 
 class NotSearchableModel extends \Illuminate\Database\Eloquent\Model

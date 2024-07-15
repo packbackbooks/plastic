@@ -5,14 +5,14 @@ namespace Sleimanx2\Plastic\Mappings;
 use Illuminate\Database\Eloquent\Model;
 use Sleimanx2\Plastic\Exception\InvalidArgumentException;
 use Sleimanx2\Plastic\Exception\MissingArgumentException;
-use Sleimanx2\Plastic\Searchable;
+use Sleimanx2\Plastic\PlasticSearchable;
 
 abstract class Mapping
 {
     /**
      * Eloquent instance.
      *
-     * @var Model|Searchable
+     * @var Model|PlasticSearchable
      */
     protected $model;
 
@@ -64,7 +64,7 @@ abstract class Mapping
 
         $traits = class_uses_recursive(get_class($this->model));
 
-        if (!isset($traits[Searchable::class])) {
+        if (!isset($traits[PlasticSearchable::class])) {
             throw new InvalidArgumentException(get_class($this->model).' does not use the searchable trait');
         }
     }
