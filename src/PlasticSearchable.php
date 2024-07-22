@@ -178,12 +178,12 @@ trait PlasticSearchable
      */
     public function __call($method, $parameters)
     {
-        if ($method == 'search') {
+        if ($method == 'searchPlastic') {
             //Start an elastic dsl search query builder
             return Plastic::search()->model($this);
         }
 
-        if ($method == 'suggest') {
+        if ($method == 'suggestPlastic') {
             //Start an elastic dsl suggest query builder
             return Plastic::suggest()->index($this->getDocumentIndex());
         }
